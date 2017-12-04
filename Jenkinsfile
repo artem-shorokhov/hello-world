@@ -1,5 +1,5 @@
 node {
-    stage('Test jenkins.groovy') {
-        jenkins()
+    stage('Build') {
+        sh './gradlew build'
     }
 }
