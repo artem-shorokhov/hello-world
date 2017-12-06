@@ -8,7 +8,7 @@ node {
             sh './gradlew build'
         }
         
-        if (${env.BRANCH_NAME}.startsWith('release')) {
+        if (BRANCH_NAME.startsWith('release')) {
             stage('release') {
                 sh 'echo Attention! Releasing!'
             }
